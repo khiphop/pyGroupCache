@@ -116,7 +116,7 @@ def get_rule():
             'size': 1 << 9,
             'ttl': 172800,
             'back_source': {
-                'url': 'http://192.168.2.69:8001',
+                'url': 'http://127.0.0.1:8001',
                 'field': 'data.title',
             },
         },
@@ -125,7 +125,7 @@ def get_rule():
             'size': 1 << 20,
             'ttl': 172800,
             'back_source': {
-                'url': 'http://192.168.2.69:8001',
+                'url': 'http://127.0.0.1:8001',
                 'field': 'data.version',
             },
         },
