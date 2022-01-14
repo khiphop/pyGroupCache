@@ -11,7 +11,8 @@ def inner_get(node, group, key):
     print('Inner_get')
     try:
         url = 'http://' + str(node) + '/inner/' + str(group) + '/' + str(key)
-        r = requests.get(url=url, timeout=0.2)
+        r = requests.get(url=url, timeout=0.5)
+
         d = json.loads(r.content)
         val = d['data']
     except BaseException as err:
