@@ -6,7 +6,7 @@ import requests
 import json
 import copy
 
-from Step3.cac import Cac
+from Step3and4.cac import Cac
 
 
 def do_http(url):
@@ -152,7 +152,7 @@ def new_groups():
             'ttl': 172800,
             'back_source': {
                 'url': 'http://127.0.0.1:8013',
-                'field': 'data',
+                'field': 'datas',
             },
         },
         {
@@ -160,8 +160,8 @@ def new_groups():
             'size': 1 << 20,
             'ttl': 172800,
             'back_source': {
-                'url': 'http://127.0.0.1:8011',
-                'field': 'data.version',
+                'url': 'http://127.0.0.1:8013',
+                'field': 'data',
             },
         },
     ]
@@ -195,6 +195,9 @@ def demo_on_back_source():
 
 
 def demo_back_source_mutex():
+    """
+    cn: 按序进行回源, key不一样, 每次发生回源, key一样的情况见 demo_back_source_recheck()
+    """
     groupCache = new_groups()
 
     threads = []
@@ -249,8 +252,8 @@ def demo_back_source_cd():
 
 
 if __name__ == '__main__':
-    # demo_set_get()
+    demo_set_get()
     # demo_on_back_source()
     # demo_back_source_mutex()
     # demo_back_source_recheck()
-    demo_back_source_cd()
+    # demo_back_source_cd()

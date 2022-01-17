@@ -119,7 +119,8 @@ def demo_choose_node():
 
 
 def demo_vnc_effect():
-    ch = ConHash(10)
+    ch = ConHash(1)
+    # ch = ConHash(10)
     ch.add_nodes(['127.0.0.1:7000', '127.0.0.1:8000', '127.0.0.1:9000'])
 
     total_times = 100
@@ -137,6 +138,6 @@ def demo_vnc_effect():
 
 
 if __name__ == '__main__':
-    # demo_simple()
+    demo_simple()
     # demo_choose_node()
-    demo_vnc_effect()
+    # demo_vnc_effect()

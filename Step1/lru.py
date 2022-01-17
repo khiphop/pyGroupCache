@@ -192,8 +192,8 @@ def demo_on_expire():
 
 
 if __name__ == '__main__':
-    # demo_set_get()
-    demo_move_2_head()
+    demo_set_get()
+    # demo_move_2_head()
     # demo_on_remove()
     # demo_custom_on_remove()
     # demo_on_expire()

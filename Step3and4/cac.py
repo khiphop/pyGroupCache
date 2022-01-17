@@ -1,7 +1,7 @@
 # coding: utf-8
 import threading
 
-from pyCache.app.util.lru import Lru
+from Step3and4.lru import Lru
 
 
 def handle_set_val(val):
